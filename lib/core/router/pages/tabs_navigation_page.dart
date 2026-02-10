@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:logo_app/core/router/router.gr.dart';
+import 'package:logo_app/widgets/nav_bar.dart';
 
 @RoutePage()
 class TabsNavigationPage extends StatelessWidget {
@@ -14,17 +15,7 @@ class TabsNavigationPage extends StatelessWidget {
         final tabsRouter = AutoTabsRouter.of(context);
         return Scaffold(
           body: child,
-          bottomNavigationBar: BottomNavigationBar(
-            items: [
-              BottomNavigationBarItem(
-                label: 'page1',
-                icon: Icon(Icons.ac_unit),
-              ),
-              BottomNavigationBarItem(
-                label: 'page2',
-                icon: Icon(Icons.ac_unit),
-              ),
-            ],
+          bottomNavigationBar: CustomNavBar(
             currentIndex: tabsRouter.activeIndex,
             onTap: tabsRouter.setActiveIndex,
           ),

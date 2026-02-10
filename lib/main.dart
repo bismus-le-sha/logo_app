@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:logo_app/core/router/router.dart';
+import 'package:logo_app/core/theme/app_theme.dart';
 import 'injection_container.dart' as di;
 
 void main() async {
@@ -13,6 +14,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(routerConfig: di.sl<AppRouter>().config());
+    return MaterialApp.router(
+      routerConfig: di.sl<AppRouter>().config(),
+      theme: appTheme,
+    );
   }
 }
