@@ -1,16 +1,22 @@
 name: logo_app
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0+1
 
 environment:
   sdk: ^3.11.0-200.1.beta
 
 dependencies:
+  auto_route: ^11.1.0
+  bloc: ^9.2.0
   flutter:
     sdk: flutter
+  flutter_svg: ^2.2.3
+  get_it: ^9.2.0
 
 dev_dependencies:
+  auto_route_generator: ^10.4.0
+  build_runner: ^2.11.0
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
