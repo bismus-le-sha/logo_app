@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:logo_app/core/router/router.dart';
+import 'injection_container.dart' as di;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await di.init();
   runApp(const MainApp());
 }
 
@@ -9,12 +13,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+    return MaterialApp.router(routerConfig: di.sl<AppRouter>().config());
   }
 }
