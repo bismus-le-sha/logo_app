@@ -10,7 +10,7 @@ class TabsNavigationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsRouter.tabBar(
-      routes: [CounterRoute(), LogoRoute()],
+      routes: [LogoRoute(), CounterRoute()],
       builder: (context, child, tabController) {
         final tabsRouter = AutoTabsRouter.of(context);
         return Scaffold(
